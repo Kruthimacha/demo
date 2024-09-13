@@ -9,7 +9,7 @@ app = FastAPI()
 
 # MongoDB setup
 client = MongoClient("mongodb://localhost:27017/")
-db = client["mydatabase"]  # Replace with your MongoDB database name
+db = client["mydatabase"] 
 users_collection = db["users"]
 
 class User(BaseModel):
@@ -19,7 +19,7 @@ class User(BaseModel):
     dob: str
 
 # Secret key for JWT encoding and decoding
-SECRET_KEY = "your_generated_secret_key"  # Replace with your generated key
+SECRET_KEY = "your_generated_secret_key"  
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
